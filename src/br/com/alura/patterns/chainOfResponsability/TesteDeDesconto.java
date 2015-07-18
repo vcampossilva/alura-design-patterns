@@ -6,7 +6,7 @@ public class TesteDeDesconto {
 		
 		CalculadoraDeDescontos descontos = new CalculadoraDeDescontos();
 		
-		Orcamento orcamento = new Orcamento(600.0);
+		Orcamento orcamento = new Orcamento(500.0);
 		orcamento.adicionaItem(new Item("CANETA", 250.0));
 		orcamento.adicionaItem(new Item("LAPIS", 250.0));
 		
