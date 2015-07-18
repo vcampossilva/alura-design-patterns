@@ -4,14 +4,14 @@ public class ProcessaRequisicao {
 
 	public void processa(Requisicao requisicao, Conta conta){
 		
-		Resposta xmlResposta = new XMLResposta();
-		Resposta csvResposta = new CSVResposta();
+//		Resposta semResposta = new SemResposta(null);
 		Resposta porcentagemResposta = new PorcentagemResposta();
-		Resposta semResposta = new SemResposta();
+		Resposta csvResposta = new CSVResposta(porcentagemResposta);
+		Resposta xmlResposta = new XMLResposta(csvResposta);
 		
-		xmlResposta.setProxima(csvResposta);
-		csvResposta.setProxima(porcentagemResposta);
-		porcentagemResposta.setProxima(semResposta);
+//		xmlResposta.setProxima(csvResposta);
+//		csvResposta.setProxima(porcentagemResposta);
+//		porcentagemResposta.setProxima(semResposta);
 		
 		xmlResposta.responde(requisicao, conta);
 		

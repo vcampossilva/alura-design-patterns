@@ -4,6 +4,10 @@ public class XMLResposta implements Resposta {
 
 	private Resposta resposta;
 	
+	public XMLResposta(Resposta resposta) {
+		this.resposta = resposta;
+	}
+	
 	@Override
 	public void responde(Requisicao req, Conta conta) {
 		if(req.getFormato() == Formato.XML){

@@ -4,6 +4,10 @@ public class CSVResposta implements Resposta{
 
 	private Resposta resposta;
 	
+	public CSVResposta(Resposta resposta) {
+		this.resposta = resposta;
+	}
+
 	@Override
 	public void responde(Requisicao req, Conta conta) {
 		if(req.getFormato() == Formato.CSV){
