@@ -1,10 +1,17 @@
 package br.com.alura.patterns.templateMethod;
 
 import br.com.alura.patterns.chainOfResponsability.Item;
+import br.com.alura.patterns.strategy.Imposto;
 import br.com.alura.patterns.strategy.Orcamento;
 
 public class ICPP extends TemplateDeImpostoCondicional{
 
+	public ICPP(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
+	public ICPP() {}
+	
 	@Override
 	protected double minimaTaxacao(Orcamento orcamento) {
 		return orcamento.getValor() * 0.05;
