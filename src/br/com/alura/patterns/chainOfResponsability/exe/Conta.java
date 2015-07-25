@@ -1,9 +1,12 @@
 package br.com.alura.patterns.chainOfResponsability.exe;
 
+import java.util.Calendar;
+
 public class Conta {
 
 	private String titular;
 	private double saldo;
+	private Calendar dataAbertura;
 	
 	public Conta(String titular, double saldo) {
 		this.titular = titular;
@@ -22,6 +25,14 @@ public class Conta {
 	}
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
+	}
+
+	public Calendar getDataAbertura() {
+		return dataAbertura;
+	}
+
+	public void setDataAbertura(Calendar dataAbertura) {
+		this.dataAbertura = dataAbertura;
 	}
 	
 }
