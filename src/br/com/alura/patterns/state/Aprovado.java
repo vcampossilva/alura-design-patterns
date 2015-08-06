@@ -4,9 +4,12 @@ import br.com.alura.patterns.state.Orcamento;
 
 public class Aprovado implements EstadoDeUmOrcamento{
 
+	private boolean aplicado = false;
+	
 	@Override
 	public void aplicaDescontoExtra(Orcamento orcamento) {	
-		orcamento.valor -= orcamento.valor * 0.02;
+		if(!aplicado) { orcamento.valor -= orcamento.valor * 0.02; aplicado = true;}
+		else throw new RuntimeException("Desconto já aplicado");
 	}
 
 	@Override
