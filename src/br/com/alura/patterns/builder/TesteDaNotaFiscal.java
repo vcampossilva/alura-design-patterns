@@ -26,8 +26,8 @@ public class TesteDaNotaFiscal {
 		
 		builder.paraEmpresa("Caelum Ensino e Inovação")
 		.comCnpj("12.345.678/0001/72")
-		.comItem(builderItem.comNome("item 1").comValor(200.0).controi())
-		.comItem(builderItem.comNome("item 2").comValor(400.0).controi())
+		.comItem(builderItem.com("item 1").com(200.0).controi())
+		.comItem(builderItem.com("item 2").com(400.0).controi())
 		.comObservacoes("observacoes");
 		
 		
