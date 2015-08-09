@@ -21,8 +21,12 @@ public class NotaFiscalBuilder {
 	private List<AcaoAposGerarNota> todasAcoesASeremExecutadas;
 
 	public NotaFiscalBuilder() {
+	
+	}
+	
+	public NotaFiscalBuilder(List<AcaoAposGerarNota> todasAcoesASeremExecutadas) {
 		this.data = Calendar.getInstance();
-		this.todasAcoesASeremExecutadas = new ArrayList<AcaoAposGerarNota>();
+		this.todasAcoesASeremExecutadas = todasAcoesASeremExecutadas;
 	}
 	
 	public void adicionaAcao(AcaoAposGerarNota acao){
